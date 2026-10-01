@@ -1,0 +1,17 @@
+/* Jornada do Empreendedor: usa as variáveis do style.css, então respeita claro/escuro */
+.jh h2{margin:0 0 4px;font-size:24px}
+.jh p{margin:0 0 12px;color:var(--mu)}
+.jh strong{color:var(--ink)}
+.pgb{height:14px;background:var(--hv);border:1px solid var(--ln);border-radius:99px;overflow:hidden;margin-bottom:16px}
+.pgb i{display:block;height:100%;background:var(--br);border-radius:99px;transition:width .5s}
+.jp{margin-bottom:16px}.jp h3{margin:0 0 6px}.jp p{margin:0 0 12px}
+.jl{display:grid;gap:2px;padding:6px}
+.jr{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:6px;cursor:pointer;color:var(--ink)}
+.jr:hover{background:var(--hv)}.jr:focus-visible{outline:2px solid var(--br);outline-offset:2px}
+.jr .ji{flex:none;width:22px;text-align:center;color:var(--mu);font-weight:700}
+.jr.ok .ji{color:#1f9d55}.jr.nx{font-weight:700}.jr.nx .ji{color:var(--br)}
+.jr.em{cursor:default;color:var(--mu)}.jr.em:hover{background:none}
+.jr small{margin-left:auto;font-size:12px;color:var(--mu)}
+.jf{display:grid;gap:14px;max-width:720px}
+.jf textarea{resize:vertical;min-height:60px}
+.onb{display:grid;gap:10px;min-width:min(440px,86vw)}.onb h2{margin:0}
