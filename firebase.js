@@ -3,7 +3,7 @@ import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWith
 import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager, collection, getDocs, doc, getDoc, writeBatch } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 
-const TABS = ["contatos", "negocios", "tarefas", "interacoes", "produtos", "negocio_produtos"];
+const TABS = ["contatos", "negocios", "tarefas", "interacoes", "produtos", "negocio_produtos", "metas"];
 const META = ["empresa", "jornada"]; // documentos em users/{uid}/meta/{nome}
 const $ = s => document.querySelector(s);
 

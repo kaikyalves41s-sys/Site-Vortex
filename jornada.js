@@ -62,7 +62,7 @@ V.dashboard.title = 'Painel de vendas';
 ICO.inicio = ICO.dashboard; ICO.planejamento = ICO.tarefas; ICO.perfil = ICO.empresa;
 ICO.ideia = '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>';
 MAIN.splice(0, 1, 'inicio');
-DO.more = () => modal('Mais', `<div class="w sh">${['ideia', 'planejamento', 'perfil', 'dashboard', 'produtos', 'top', 'empresa', 'backup'].map(k =>
+DO.more = () => modal('Mais', `<div class="w sh">${['ideia', 'planejamento', 'perfil', 'metas', 'dashboard', 'produtos', 'top', 'empresa', 'backup'].map(k =>
   `<button type="button" class="b" data-go="${k}">${ic(k)}${V[k].title}</button>`).join('')}<button type="button" class="b" data-do="tema">${themeLbl()}</button></div>`, []);
 
 /* ---------- onboarding (primeiro acesso) ---------- */

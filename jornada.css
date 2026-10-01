@@ -15,3 +15,8 @@
 .jf{display:grid;gap:14px;max-width:720px}
 .jf textarea{resize:vertical;min-height:60px}
 .onb{display:grid;gap:10px;min-width:min(440px,86vw)}.onb h2{margin:0}
+
+/* Fase 2: metas e resumo de clientes */
+.mp{min-width:150px}.mp i{display:block;height:8px;background:var(--hv);border:1px solid var(--ln);border-radius:99px;overflow:hidden}
+.mp u{display:block;height:100%;background:var(--br);border-radius:99px}.mp small{display:block;margin-top:3px;color:var(--mu);font-size:12px}
+.jres{flex-basis:100%;color:var(--mu);font-size:13px}.jres b{color:var(--ink)}
