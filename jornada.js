@@ -21,7 +21,7 @@ const etapas = () => [
   ['planejamento', '📋', 'Planejamento', cheios(J().planejamento, PLANO.map(x => x[0])) >= 5, 0, 'Monte seu planejamento: objetivo, proposta de valor, canais e metas.'],
   ['produtos', '📦', 'Produtos e serviços', D.produtos.length > 0, 0, 'Cadastre seu primeiro produto ou serviço.'],
   ['contatos', '👥', 'Clientes', D.contatos.length > 0, 0, 'Cadastre seu primeiro cliente.'],
-  ['financas', '💰', 'Finanças', false, 1], ['divulgacao', '📣', 'Divulgação', false, 1],
+  ['financas', '💰', 'Finanças', (D.receitas || []).length + (D.despesas || []).length > 0, 0, 'Registre sua primeira receita ou despesa para ver seu lucro.'], ['divulgacao', '📣', 'Divulgação', false, 1],
   ['formalizacao', '🏢', 'Formalização', false, 1], ['crescimento', '🚀', 'Crescimento', false, 1]];
 window.JORNADA = { etapas, percentual: () => { const e = etapas(); return Math.round(e.filter(x => x[3]).length / e.length * 100) } };
 
@@ -62,7 +62,7 @@ V.dashboard.title = 'Painel de vendas';
 ICO.inicio = ICO.dashboard; ICO.planejamento = ICO.tarefas; ICO.perfil = ICO.empresa;
 ICO.ideia = '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>';
 MAIN.splice(0, 1, 'inicio');
-DO.more = () => modal('Mais', `<div class="w sh">${['ideia', 'planejamento', 'perfil', 'metas', 'dashboard', 'produtos', 'top', 'empresa', 'backup'].map(k =>
+DO.more = () => modal('Mais', `<div class="w sh">${['ideia', 'planejamento', 'perfil', 'metas', 'financas', 'calculadora', 'relatorios', 'dashboard', 'produtos', 'top', 'empresa', 'backup'].map(k =>
   `<button type="button" class="b" data-go="${k}">${ic(k)}${V[k].title}</button>`).join('')}<button type="button" class="b" data-do="tema">${themeLbl()}</button></div>`, []);
 
 /* ---------- onboarding (primeiro acesso) ---------- */

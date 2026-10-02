@@ -20,3 +20,15 @@
 .mp{min-width:150px}.mp i{display:block;height:8px;background:var(--hv);border:1px solid var(--ln);border-radius:99px;overflow:hidden}
 .mp u{display:block;height:100%;background:var(--br);border-radius:99px}.mp small{display:block;margin-top:3px;color:var(--mu);font-size:12px}
 .jres{flex-basis:100%;color:var(--mu);font-size:13px}.jres b{color:var(--ink)}
+
+/* Fase 3: finanças, calculadora e relatórios */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.fgrid .cd span{display:block;color:var(--mu);font-size:13px;margin-bottom:4px}
+.fch{display:flex;gap:10px;align-items:flex-end;height:150px;margin-top:10px}
+.fm{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%}
+.fb2{flex:1;width:100%;display:flex;gap:4px;align-items:flex-end;justify-content:center}
+.fb2 i{display:block;width:40%;max-width:28px;min-height:2px;border-radius:4px 4px 0 0}
+.fb2 .r,.leg .r{background:#1f9d55}.fb2 .d,.leg .d{background:#d9531e}
+.fm small{font-size:11px;color:var(--mu)}
+.leg{margin:10px 0 0;font-size:13px;color:var(--mu)}.leg span{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle}
+#cr p{margin:10px 0 0}
