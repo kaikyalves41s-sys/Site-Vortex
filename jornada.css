@@ -32,3 +32,16 @@
 .fm small{font-size:11px;color:var(--mu)}
 .leg{margin:10px 0 0;font-size:13px;color:var(--mu)}.leg span{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle}
 #cr p{margin:10px 0 0}
+
+/* Fase 4: divulgação, aprenda e formalização */
+details.les{padding:0;margin-bottom:10px}
+details.les>summary{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;list-style:none}
+details.les>summary::-webkit-details-marker{display:none}
+details.les>summary::after{content:"▾";margin-left:8px;color:var(--mu)}
+details.les[open]>summary::after{content:"▴"}
+details.les>summary small{color:var(--mu)}details.les>summary .ct{margin-left:auto;font-size:13px;color:var(--mu)}
+details.les>:not(summary){margin:0 16px 14px}
+details.les h3{margin:12px 16px 4px}
+.ck{list-style:none;padding:0;margin:0 16px 14px;display:grid;gap:6px}.ck label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.aviso{margin-bottom:16px;border-left:4px solid #c9a20a}.aviso a{color:var(--br)}
+#dv .fa{margin-top:12px}

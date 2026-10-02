@@ -17,7 +17,7 @@ mais:'<circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle c
 sol:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
 lua:'<path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/>'},
 FABL={dashboard:"Criar novo",contatos:"Novo contato",negocios:"Novo negócio",tarefas:"Nova tarefa",produtos:"Novo produto"};
-let D={contatos:[],negocios:[],tarefas:[],interacoes:[],produtos:[],negocio_produtos:[],metas:[],receitas:[],despesas:[],empresa:{}},S={},tm,pend=0,bad=0;
+let D={contatos:[],negocios:[],tarefas:[],interacoes:[],produtos:[],negocio_produtos:[],metas:[],receitas:[],despesas:[],campanhas:[],empresa:{}},S={},tm,pend=0,bad=0;
 const $=s=>document.querySelector(s),
 ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch{}},
 h=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])),
@@ -215,7 +215,7 @@ exp(pre){dl(`${pre=='pre'?'pre_import_backup':'backup_crm'}_${stamp()}.json`,JSO
 imp(){const i=document.createElement('input');i.type='file';i.accept='.json';i.onchange=async()=>{let j;try{j=JSON.parse(await i.files[0].text())}catch{return toast('O arquivo selecionado não é um backup válido (.json).',{err:1})}
  if(!Array.isArray(j.contatos)||!Array.isArray(j.negocios))return toast(`Este arquivo não parece ser um backup do ${APP}.`,{err:1});
  if(!confirm(`Importar ${j.contatos.length} contatos, ${j.negocios.length} negócios e ${(j.produtos||[]).length} produtos? Isto substitui todos os dados atuais.`))return;
- this.exp('pre');for(const k of ['contatos','negocios','tarefas','interacoes','produtos','negocio_produtos','metas','receitas','despesas'])D[k]=Array.isArray(j[k])?j[k]:[];D.empresa=j.empresa||{};if(j.jornada)D.jornada=j.jornada;commit('Backup importado com sucesso.')};i.click()}}
+ this.exp('pre');for(const k of ['contatos','negocios','tarefas','interacoes','produtos','negocio_produtos','metas','receitas','despesas','campanhas'])D[k]=Array.isArray(j[k])?j[k]:[];D.empresa=j.empresa||{};if(j.jornada)D.jornada=j.jornada;commit('Backup importado com sucesso.')};i.click()}}
 };
 
 /* ---------- tema, ações do celular e navegação ---------- */
